@@ -20,14 +20,16 @@ for movie in movies_html_list:
         movie_name = movie_categorized[1]
     finally:
         counter += 1
-        print(counter)
-        print(movie_name)
+        # print(counter)
+        # print(movie_name)
         movies_list_descending.append(movie_name)
-     
-for i in range(99, 0, -1):
+
+print(movies_list_descending)
+
+for i in range(len(movies_list_descending)-1, -1, -1):
     movies_list_ascending.append(movies_list_descending[i])
     
-
+print(movies_list_ascending)
 with open("movies_list_descending.txt", "w") as file:
     index = 1
     for movie in movies_list_ascending:
